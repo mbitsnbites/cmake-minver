@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# Get the path of the script. From http://stackoverflow.com/a/246128/5778708
+SOURCE="${BASH_SOURCE[0]}"
+while [ -h "$SOURCE" ]; do
+  DIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
+  SOURCE="$(readlink "$SOURCE")"
+  [[ $SOURCE != /* ]] && SOURCE="$DIR/$SOURCE"
+done
+DIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
+
+# Run the CMake file in script mode.
+cmake -P "${DIR}/cmake-minver.cmake" $*
+
