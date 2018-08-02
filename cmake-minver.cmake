@@ -4,7 +4,7 @@ cmake_minimum_required(VERSION 2.8.5)
 
 function(version_required_by)
     set(_keywords ${ARGN})
-    foreach(_ver IN ITEMS 2.6 2.8.0 2.8.1 2.8.2 2.8.3 2.8.4 2.8.5 2.8.6 2.8.7 2.8.8 2.8.9 2.8.10 2.8.11 2.8.12 3.0 3.1 3.2 3.3 3.4 3.5 3.6 3.7)
+    foreach(_ver IN ITEMS 2.6 2.8.0 2.8.1 2.8.2 2.8.3 2.8.4 2.8.5 2.8.6 2.8.7 2.8.8 2.8.9 2.8.10 2.8.11 2.8.12 3.0 3.1 3.2 3.3 3.4 3.5 3.6 3.7 3.8 3.9 3.10 3.11 3.12 )
         if (_ver VERSION_LESS 2.8)
             set(_url "https://cmake.org/cmake/help/cmake${_ver}docs.html")                
         elseif (_ver VERSION_LESS 3.0)
